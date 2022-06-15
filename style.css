@@ -38,4 +38,49 @@ body {
 .navigation ul li {
     position: relative;
     list-style: none;
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--c0l0r);
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(-30px);
+    color: white;
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--c0l0r);
+    font-weight: 500;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li a:hover .text {
+    opacity: 1;
+    transform: translateY(10px);
 }
